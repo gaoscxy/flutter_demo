@@ -6,6 +6,7 @@ EventChannel：用于事件流的发送（event streams）
 MessageChannel：用于传递字符串和半结构化的消息
 
 本案例只写了MethodChanel
+Android端
 首先，创建MethodChannel，在FlutterPlugin定义final类型的CHANNEL，通常为“包名/标识”，这里一定要和跟flutter中使用相同的注册字符串，否则无法完成互调。registerWith方法用于注册渠道。然后，设置MethodCallHander，methodCall中传递来自flutter的参数，通过result返回给flutter结果。本案例做了4个操作，详见注释
 MainActivity，继承FlutterActivity ,覆写configureFlutterEngine方法，给此类注册组件
 注意：
